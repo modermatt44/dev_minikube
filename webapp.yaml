@@ -29,7 +29,7 @@ spec:
           valueFrom:
             secretKeyRef:
               name: mongo-secret
-              key: mongo-password
+              key: mongo-password 
         - name: DB_URL
           valueFrom:
             configMapKeyRef:
@@ -45,7 +45,7 @@ spec:
   selector:
     app: webapp
   ports:
-  - protocol: TCP
-    port: 3000
-    targetPort: 3000
-    nodePort: 30100
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+      nodePort: 30100
